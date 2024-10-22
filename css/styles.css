@@ -1,0 +1,379 @@
+/* Basic styling */
+:root {
+  --primary-color: #190ae9;
+  --secondary-color: #e4442f;
+  --bg-color: #f4f4f4;
+  --text-color: #000000;
+  --button-hover-color: #0b456b;
+  --grey-color: #aeaeae;
+  --gradient: radial-gradient(#fff, #ffd6d6);
+  --font-family: "Poppins", sans-serif;
+  --font-size-base: 16px;
+  --spacing-base: 1rem; 
+  --transition-duration: 0.3s;
+}
+
+/* Global Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+}
+
+/* Header */
+header {
+  background: var(--gradient);
+}
+
+.nav-container .brand-logo {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: "Yesteryear", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  font-family: var(--font-family);
+}
+
+.nav-wrapper {
+  background-color: var(--gradient);
+  align-items: center;
+  height: 8vh;
+  margin: auto;
+}
+
+.nav-container {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  width: 85vw;
+  margin: auto;
+}
+
+.nav-container ul li {
+  display: inline;
+}
+
+.nav-links a {
+  font-size: .95em;
+  color: var(--text-color);
+  margin-left: 30px;
+  text-decoration: none;
+  transition: color var(--transition-duration);
+}
+
+.nav-container a:hover {
+  color: var(--secondary-color);
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--text-color);
+}
+
+.hero {
+  width: 85vw;
+  margin: 30px auto;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.col-2 img {
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+.col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+/* Product Grid */
+.container {
+  width: 85vw;
+  margin: 30px auto;
+}
+
+.container h2 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-base);
+  padding: var(--spacing-base);
+}
+
+/* Product Card */
+.product-card {
+  background: var(--bg-color);
+  padding: var(--spacing-base);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card img {
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.btn {
+  background-color: var(--primary-color);
+  display: inline-block;
+  color: var(--bg-color);
+  border: none;
+  padding: 8px 30px;
+  cursor: pointer;
+  margin: 30px 0;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color var(--transition-duration);
+}
+
+.btn:hover {
+  background-color: var(--button-hover-color);
+}
+
+.view_all {
+  margin: 0px auto;
+  text-align: center;
+}
+
+.btn1 {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  border-radius: 50px;
+  color: var(--bg-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  transition: background-color var(--transition-duration);
+}
+
+.btn1:hover {
+  background-color: var(--primary-color);
+}
+
+/* Form */
+form label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: var(--spacing-base);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+form button {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+
+form button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/*--------- footer ---------*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  background: var(--text-color);
+  color: var(--grey-color);
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+
+.footer-container {
+  /* max-width: 1300px; */
+  margin: auto;
+  width: 85vw;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--grey-color)
+}
+
+footer p {
+  color: var(--grey-color);
+}
+
+footer h3 {
+  color: var(--bg-color);
+  margin-bottom: 20px;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-col-1 {
+  flex-basis: 1;
+  text-align: center;
+}
+
+.footer-col-1 h2 {
+  width: 180px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.footer-col-2,
+.footer-col-3 {
+  flex-basis: 12%;
+  text-align: center;
+  /* flex-wrap: wrap; */
+}
+
+.footer-col-2 a,
+.footer-col-3 a{
+  margin-right: 40px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+footer hr {
+  border: none;
+  background: var(--grey-color);
+  height: 1px;
+  margin: 20px 0;
+}
+
+.copyright {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    width: 90vw;
+  }
+
+  .container {
+    width: 90vw;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .nav-container ul li {
+    display: block;
+  }
+
+  .nav-links {
+    background-color: var(--bg-color);
+    box-sizing: border-box;
+    position: absolute;
+    top: -110%;
+    left: 0;
+    width: 100%;
+    height: 16vh;
+    text-align: left;
+    transition: 0.3s;
+  }
+
+  .nav-links.active {
+    z-index: 10;
+    top: 8vh;
+    padding-left: 15vw;
+    margin: 0;
+  }
+
+  .nav-links.active li {
+    margin-top: 14px;
+  }
+
+  .nav-links.active li a {
+    margin: 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 470px) {
+  .footer-col-2,
+  .footer-col-3 {
+    padding-left: 80px;
+  }
+}
